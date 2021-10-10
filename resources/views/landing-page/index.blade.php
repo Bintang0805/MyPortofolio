@@ -3,41 +3,7 @@
         {{ $title }}
     </x-slot>
 
-    <div id="navbar" class="fixed top-0 left-0 px-5 w-full sm:px-12 py-5">
-        <div class="navbar">
-            <div class="grid grid-cols-12">
-                <div class="col-span-8">
-                    <div class="nav_title flex items-center text-white text-xl font-medium text-light">
-                        My Portofolio <i class="fas fa-star text-base ml-3"></i>
-                    </div>
-                </div>
-                <div class="col-span-3">
-                    <ul class="flex gap-3 text-white items-center justify-between font-medium">
-                        <li>
-                            <a href="" class="text-light border-b-2 border-light">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-layouts.navbar/>
 
     {{-- Page One --}}
 
@@ -53,9 +19,9 @@
                             <span class="text-dark-blue">WEBSITE</span>
                         </p>
                         <p class="text-gray-400 text-lg tracking-wider sm:tracking-widest pb-5">In every problem always have a solution</p>
-                        <button type="button" class="bg-dark-blue text-white px-7 py-2 font-bold rounded-md">
+                        <x-layouts.button>
                             EXPLORE NOW
-                        </button>
+                        </x-layouts.button>
                     </div>
                 </div>
                 <div class="image hidden lg:grid flex justify-center items-center w-full h-screen">
@@ -73,8 +39,40 @@
 
     {{-- Page Two --}}
 
-    <div id="page-two" class="w-full px-14 h-screen bg-secondary">
-
+    <div id="page-two" class="w-full px-7 sm:px-14 pb-16 sm:pb-0 pt-14 h-auto sm:h-screen bg-secondary">
+        <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-10">
+            ABOUT ME
+        </div>
+        <div class="w-full bg-primary h-auto py-10 px-5 sm:px-10 rounded-lg shadow-lg">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 sm:col-span-3 pb-5 sm:pb-0">
+                    <div class="grid grid-cols-1">
+                        <div class="row flex justify-center">
+                            <img src="{{ asset('img/my_photov2.jpg') }}" alt="" class="w-52 rounded-3xl">
+                        </div>
+                        <div class="row h-auto pt-7">
+                            <div class="name text-center text-white tracking-wider font-medium text-lg">
+                                Muhammad Ikhsan Bintang
+                            </div>
+                            <div class="title text-center text-gray-300">
+                                Web Development
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 sm:col-span-9 pl-0 sm:pl-10">
+                    <div class="text-lg text-white text-justify h-full relative">
+                        Hai, my name is Muhammad Ikhsan Bintang and i'm is a Web Development engineer, I’m 17 years old and i'm very like programming, especially backend programming.
+                        I am someone who always wants to learn new things related to programming.
+                        <div class="static sm:absolute flex justify-center bottom-0 right-0 pt-10 sm:pt-0">
+                            <x-layouts.button>
+                                VIEW MORE
+                            </x-layouts.button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- End Page Two --}}
