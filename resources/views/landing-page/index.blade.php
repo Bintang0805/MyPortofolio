@@ -40,12 +40,12 @@
     {{-- Page Two --}}
 
     <div id="page-two" class="w-full px-7 sm:px-14 pb-16 sm:pb-0 pt-14 h-auto sm:h-screen bg-secondary">
-        <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-10">
+        <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-10 opacity-0" id="page-two__title">
             ABOUT ME
         </div>
-        <div class="w-full bg-primary h-auto py-10 px-5 sm:px-10 rounded-lg shadow-lg">
+        <div class="w-full bg-primary h-auto py-10 px-5 sm:px-10 rounded-lg shadow-lg opacity-0" id="page-two__content">
             <div class="grid grid-cols-12">
-                <div class="col-span-12 sm:col-span-3 pb-5 sm:pb-0">
+                <div class="col-span-12 sm:col-span-3 pb-5 sm:pb-0 transform -translate-x-10 opacity-0" id="page-two__contentLeft">
                     <div class="grid grid-cols-1">
                         <div class="row flex justify-center">
                             <img src="{{ asset('img/my_photov2.jpg') }}" alt="" class="w-52 rounded-3xl">
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-12 sm:col-span-9 pl-0 sm:pl-10">
+                <div class="col-span-12 sm:col-span-9 pl-0 sm:pl-10 opacity-0 transform translate-x-8" id="page-two__contentRight">
                     <div class="text-lg text-white text-justify h-full relative">
                         Hai, my name is Muhammad Ikhsan Bintang and i'm is a Web Development engineer, I’m 17 years old and i'm very like programming, especially backend programming.
                         I am someone who always wants to learn new things related to programming.

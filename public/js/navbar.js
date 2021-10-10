@@ -44,8 +44,6 @@ function contact_nav() {
 }
 
 window.addEventListener('scroll', ()=> {
-    var content = document.getElementById('body');
-    var contentTitle = content.getBoundingClientRect().top;
     var navbar = document.getElementById('navbar');
     var tinggiLayar = window.innerHeight;
     var pageOne = document.getElementById('page-one');
@@ -56,20 +54,32 @@ window.addEventListener('scroll', ()=> {
     var pageThreeScroll = pageThree.getBoundingClientRect().top;
     var pageFour = document.getElementById('page-four');
     var pageFourScroll = pageFour.getBoundingClientRect().top;
-
-
-    // console.log(tinggiLayar);
-    // console.log(pageTwoScroll);
-
     var pageTwoAnimation = tinggiLayar - pageTwoScroll;
     var pageThreeAnimation = tinggiLayar - pageThreeScroll;
     var pageFourAnimation = tinggiLayar - pageFourScroll;
-    console.log(pageTwoAnimation);
-    console.log(pageThreeAnimation);
-    console.log(pageTwoScroll);
+
+    var pageTwoTitle = document.getElementById('page-two__title');
+    var pageTwoContent = document.getElementById('page-two__content');
+    var pageTwoContentLeft = document.getElementById('page-two__contentLeft');
+    var pageTwoContentRight = document.getElementById('page-two__contentRight');
+
 
     if (pageTwoAnimation >= 200) {
-        console.log('munculin page two');
+        pageTwoTitle.style.transition = '0.5s';
+        pageTwoContent.style.transition = '0.5s';
+        pageTwoContent.style.transitionDelay = '1s';
+        pageTwoContentLeft.style.transition = '0.7s';
+        pageTwoContentLeft.style.transitionDelay = '1.5s';
+        pageTwoContentRight.style.transition = '0.7s';
+        pageTwoContentRight.style.transitionDelay = '1.5s';
+        pageTwoTitle.classList.add('opacity-100');
+        pageTwoTitle.classList.remove('opacity-0');
+        pageTwoContent.classList.add('opacity-100');
+        pageTwoContent.classList.remove('opacity-0');
+        pageTwoContentLeft.classList.add('opacity-100');
+        pageTwoContentLeft.classList.remove('opacity-0', 'transform', '-translate-x-8');
+        pageTwoContentRight.classList.add('opacity-100');
+        pageTwoContentRight.classList.remove('opacity-0', 'transform', 'translate-x-8');
     }
     if(pageThreeAnimation >= 200) {
         console.log('munculin page three');
@@ -84,7 +94,16 @@ window.addEventListener('scroll', ()=> {
     // console.log(pageFourScroll);
 
     var scroll = this.scrollY;
-    // console.log(scroll)
+    console.log(scroll);
+
+    if (scroll >= 200) {
+        navbar.classList.remove('py-5');
+        navbar.classList.add('py-4');
+        navbar.style.transition = '0.5s';
+    } else {
+        navbar.classList.remove('py-4');
+        navbar.classList.add('py-5');
+    }
 
     if (pageTwoScroll < 20) {
         navbar.classList.add('bg-darken-blue');
