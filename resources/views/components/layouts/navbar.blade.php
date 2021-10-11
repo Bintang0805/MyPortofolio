@@ -1,4 +1,4 @@
-<div id="navbar" class="fixed top-0 left-0 px-5 w-full sm:px-12 py-5 z-50">
+<div id="navbar" class="fixed top-0 left-0 px-5 w-full sm:px-12 py-5 z-50 hidden sm:grid">
     <div class="navbar">
         <div class="grid grid-cols-12">
             <div class="col-span-8">

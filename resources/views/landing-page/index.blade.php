@@ -24,7 +24,7 @@
                         </x-layouts.button>
                     </div>
                 </div>
-                <div class="image hidden lg:grid flex justify-center items-center w-full h-screen opacity-0 tranform translate-x-8" id="page-one__image">
+                <div class="image hidden lg:grid flex justify-center items-center w-full h-screen opacity-0 tranform translate-x-8 animate-pulse" id="page-one__image">
                     <img src="{{ asset('img/laptop_isometric.png') }}" alt="" class="object-cover w-full h-80">
                 </div>
             </div>
@@ -39,7 +39,7 @@
 
     {{-- Page Two --}}
 
-    <div id="page-two" class="w-full px-7 sm:px-14 pb-16 sm:pb-0 pt-14 h-auto sm:h-screen bg-secondary">
+    <div id="page-two" class="w-full px-7 sm:px-14 pb-16 sm:pb-0 pt-16 h-auto sm:h-screen bg-secondary">
         <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-10 opacity-0" id="page-two__title">
             ABOUT ME
         </div>
@@ -82,8 +82,26 @@
 
     {{-- Page Three --}}
 
-    <div id="page-three" class="w-full px-14 h-screen bg-primary">
-
+    <div id="page-three" class="w-full px-7 sm:px-14 pt-16 h-auto sm:h-screen pb-14 sm:pb-0 bg-primary">
+        <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-14" id="page-two__title">
+            MY PROJECTS
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-7">
+            <div class="card w-full h-80 bg-secondary">
+                <img src="{{ asset('img/portofolio.jpg') }}" alt="" class="h-full rounded-lg transform hover:scale-105 transition duration-500 cursor-pointer">
+            </div>
+            <div class="card w-full h-80 bg-secondary">
+                <img src="{{ asset('img/portofolio.jpg') }}" alt="" class="h-full rounded-lg transform hover:scale-105 transition duration-500 cursor-pointer">
+            </div>
+            <div class="card w-full h-80 bg-secondary">
+                <img src="{{ asset('img/portofolio.jpg') }}" alt="" class="h-full rounded-lg transform hover:scale-105 transition duration-500 cursor-pointer">
+            </div>
+        </div>
+        <div class="flex justify-center pt-10">
+            <x-layouts.button>
+                VIEW MORE
+            </x-layouts.button>
+        </div>
     </div>
 
     {{-- End Page Three --}}
@@ -93,8 +111,38 @@
 
     {{-- Page Four --}}
 
-    <div id="page-four" class="w-full px-14 h-screen bg-secondary">
+    <div id="page-four" class="w-full px-7 sm:px-14 pt-16 h-auto sm:h-screen pb-14 sm:pb-0 bg-secondary">
+        <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-14" id="page-two__title">
+            CONTACT ME
+        </div>
+        <div class="container w-full bg-primary rounded-lg shadow-lg px-10 py-5">
+            <div class="grid grid-cols-2 gap-5 pb-20 relative">
+                <div>
+                    <div class="div">
+                        <label class="md:text-sm text-xs text-white font-semibold">Full Name</label>
+                        <input class="w-full py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Kazukito Kanziro" />
+                    </div>
+                    <div class="div pt-7">
+                        <label class="md:text-sm text-xs text-white font-semibold">Email Address</label>
+                        <input class="w-full py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="email" placeholder="kazukitokanziro12@gmail.com" />
+                    </div>
+                    <div class="div pt-7">
+                        <label class="md:text-sm text-xs text-white font-semibold">What do you need ?</label>
+                        <input class="w-full py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="email" placeholder="I Need lorem ipsum dolor min" />
+                    </div>
 
+                </div>
+                <div class="">
+                    <label class="md:text-sm text-xs text-white font-semibold">Message</label>
+                    <textarea class="w-full h-36 max-h-60 px-3 py-2 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Please add lorem ipsum dolor min ojo riko"></textarea>
+                    <div class="static sm:absolute right-0 bottom-2">
+                        <x-layouts.button>
+                            Send Message
+                        </x-layouts.button>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- End Page Four --}}
