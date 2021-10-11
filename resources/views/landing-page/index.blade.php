@@ -12,7 +12,7 @@
         <div class="w-full h-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 items-center">
                 <div class="title text-white flex items-center justify-center sm:justify-start w-100 h-screen text-center sm:text-left">
-                    <div class="title">
+                    <div class="title opacity-0 transform -translate-x-8" id="page-one__title">
                         <p class="font-extrabold tracking-wider pb-3 text-2xl sm:text-4xl whitespace-normal sm:whitespace-nowrap">
                             WELCOME TO <br>
                             <span class="text-light">MY PORTOFOLIO</span>
@@ -24,7 +24,7 @@
                         </x-layouts.button>
                     </div>
                 </div>
-                <div class="image hidden lg:grid flex justify-center items-center w-full h-screen">
+                <div class="image hidden lg:grid flex justify-center items-center w-full h-screen opacity-0 tranform translate-x-8" id="page-one__image">
                     <img src="{{ asset('img/laptop_isometric.png') }}" alt="" class="object-cover w-full h-80">
                 </div>
             </div>

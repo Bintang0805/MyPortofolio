@@ -5,43 +5,45 @@ var contact = document.getElementById('contact_nav');
 
 
 function home_nav() {
-    console.log('home_nav');
     home.classList.add("text-lightest", "border-b-2", "border-lightest");
     about.classList.remove("text-lightest", "border-b-2", "border-lightest");
     project.classList.remove("text-lightest", "border-b-2", "border-lightest");
     contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
-    home.style.transition = '0.5s';
+    home.style.transitionDelay = '0.3s';
 }
 
 function about_nav() {
-    console.log('about_nav');
     home.classList.remove("text-lightest", "border-b-2", "border-lightest");
     about.classList.add("text-lightest", "border-b-2", "border-lightest");
     project.classList.remove("text-lightest", "border-b-2", "border-lightest");
     contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
-    about.style.transition = '0.5s';
-
+    about.style.transitionDelay = '0.3s';
 }
 
 function project_nav() {
-    console.log('project_nav');
     home.classList.remove("text-lightest", "border-b-2", "border-lightest");
     about.classList.remove("text-lightest", "border-b-2", "border-lightest");
     project.classList.add("text-lightest", "border-b-2", "border-lightest");
     contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
-    project.style.transition = '0.5s';
-
+    project.style.transitionDelay = '0.3s';
 }
 
 function contact_nav() {
-    console.log('contact_nav');
     home.classList.remove("text-lightest", "border-b-2", "border-lightest");
     about.classList.remove("text-lightest", "border-b-2", "border-lightest");
     project.classList.remove("text-lightest", "border-b-2", "border-lightest");
     contact.classList.add("text-lightest", "border-b-2", "border-lightest");
-    contact.style.transition = '0.5s';
-
+    contact.style.transitionDelay = '0.3s';
 }
+
+var pageOneTitle = document.getElementById('page-one__title');
+var pageOneImage = document.getElementById('page-one__image');
+pageOneTitle.style.transition = '1s';
+pageOneImage.style.transition = '1s';
+pageOneTitle.classList.remove('opacity-0', 'transform', '-translate-x-8');
+pageOneTitle.classList.add('opacity-100');
+pageOneImage.classList.remove('opacity-0', 'transform', 'translate-x-8');
+pageOneImage.classList.add('opacity-100');
 
 window.addEventListener('scroll', ()=> {
     var navbar = document.getElementById('navbar');
@@ -54,15 +56,45 @@ window.addEventListener('scroll', ()=> {
     var pageThreeScroll = pageThree.getBoundingClientRect().top;
     var pageFour = document.getElementById('page-four');
     var pageFourScroll = pageFour.getBoundingClientRect().top;
-    var pageTwoAnimation = tinggiLayar - pageTwoScroll;
     var pageThreeAnimation = tinggiLayar - pageThreeScroll;
     var pageFourAnimation = tinggiLayar - pageFourScroll;
 
+
+
+    var pageTwoAnimation = tinggiLayar - pageTwoScroll;
     var pageTwoTitle = document.getElementById('page-two__title');
     var pageTwoContent = document.getElementById('page-two__content');
     var pageTwoContentLeft = document.getElementById('page-two__contentLeft');
     var pageTwoContentRight = document.getElementById('page-two__contentRight');
 
+
+    if (pageOneScroll <= 0) {
+        home.classList.add("text-lightest", "border-b-2", "border-lightest");
+        about.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        project.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
+    }
+
+    if (pageTwoScroll <= 0) {
+        home.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        about.classList.add("text-lightest", "border-b-2", "border-lightest");
+        project.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
+    }
+
+    if (pageThreeScroll <= 0) {
+        home.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        about.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        project.classList.add("text-lightest", "border-b-2", "border-lightest");
+        contact.classList.remove("text-lightest", "border-b-2", "border-lightest");
+    }
+
+    if (pageFourScroll <= 0) {
+        home.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        about.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        project.classList.remove("text-lightest", "border-b-2", "border-lightest");
+        contact.classList.add("text-lightest", "border-b-2", "border-lightest");
+    }
 
     if (pageTwoAnimation >= 200) {
         pageTwoTitle.style.transition = '0.5s';
@@ -94,7 +126,6 @@ window.addEventListener('scroll', ()=> {
     // console.log(pageFourScroll);
 
     var scroll = this.scrollY;
-    console.log(scroll);
 
     if (scroll >= 200) {
         navbar.classList.remove('py-5');
