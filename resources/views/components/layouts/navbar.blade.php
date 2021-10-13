@@ -3,7 +3,7 @@
         <div class="grid grid-cols-12">
             <div class="col-span-8">
                 <div class="nav_title flex items-center text-xl font-medium text-lightest cursor-default select-none">
-                    My Portofolio <i class="fas fa-star text-base ml-3"></i>
+                    <a href="{{ route('home') }}">My Portofolio <i class="fas fa-star text-base ml-3"></i></a>
                 </div>
             </div>
             <div class="col-span-3">

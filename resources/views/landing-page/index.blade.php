@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="image hidden lg:grid flex justify-center items-center w-full h-screen opacity-0 tranform translate-x-8 animate-pulse" id="page-one__image">
-                    <img src="{{ asset('img/laptop_isometric.png') }}" alt="" class="object-cover w-full h-80">
+                    <img src="{{ asset('img/laptop_isometric.png') }}" alt="" class="h-auto sm:heigh-80" width="100%">
                 </div>
             </div>
         </div>
@@ -115,8 +115,8 @@
         <div class="title w-full flex justify-center text-3xl font-extrabold text-lightest pb-14" id="page-two__title">
             CONTACT ME
         </div>
-        <div class="container w-full bg-primary rounded-lg shadow-lg px-10 py-5">
-            <div class="grid grid-cols-2 gap-5 pb-20 relative">
+        <div class="container w-full bg-primary rounded-lg shadow-lg px-5 sm:px-10 py-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pb-20 relative">
                 <div>
                     <div class="div">
                         <label class="md:text-sm text-xs text-white font-semibold">Full Name</label>
@@ -134,12 +134,12 @@
                 </div>
                 <div class="">
                     <label class="md:text-sm text-xs text-white font-semibold">Message</label>
-                    <textarea class="w-full h-36 max-h-60 px-3 py-2 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Please add lorem ipsum dolor min ojo riko"></textarea>
-                    <div class="static sm:absolute right-0 bottom-2">
+                    <textarea class="w-full h-20 sm:h-36 max-h-60 px-3 py-2 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Please add lorem ipsum dolor min ojo riko"></textarea>
+                    <div class="static sm:absolute pt-5 lg:pt-0 right-0 bottom-2">
                         <x-layouts.button>
                             Send Message
                         </x-layouts.button>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,8 +152,41 @@
 
     {{-- Footer --}}
 
-    <div id="footer" class="w-full px-14 h-52 bg-darken-blue">
+    <div id="footer" class="w-full px-7 sm:px-14 pt-7 h-auto bg-darken-blue">
+        <div class="text-white">
+            <div class="grid grid-cols-3">
+                <div class="col-span-3 sm:col-span-2">
+                    <div class="grid grid-rows-3 sm:grid-rows-2 grid-flow-col w-7/12 gap-5">
+                        <div class="div"><i class="fas fa-map-marker-alt pr-4"></i>Jln Markisa V, Depok</div>
+                        <div class="div whitespace-nowrap"><i class="fas fa-envelope pr-3"></i>ikhsanbintang3292@gmail.com</div>
+                        <div class="div"><i class="fas fa-phone-alt pr-3"></i>085155011637</div>
+                    </div>
+                </div>
+                <div class="col-span-3 sm:col-span-1 text-4xl pt-10 sm:pt-0">
+                    <div class="grid grid-cols-1 gap-5">
+                        <div class="sosmed text-center">
+                            <i class="fab fa-instagram-square"></i>
+                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-whatsapp-square"></i>
+                        </div>
+                        <div class="subscribe flex justify-center">
+                            <x-layouts.button>
+                                Subscribe
+                            </x-layouts.button>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+            <div class="flex flex-col pt-10 pb-10 text-center text-xs">
+                <div class="copyright">
+                    @ Copyright by Muhammad Ikhsan Bintang
+                </div>
+                <div class="design">
+                    Designed by fullvector / Freepik
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- End Footer --}}
