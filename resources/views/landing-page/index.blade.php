@@ -135,7 +135,7 @@
                 <div class="">
                     <label class="md:text-sm text-xs text-white font-semibold">Message</label>
                     <textarea class="w-full h-20 sm:h-36 max-h-60 px-3 py-2 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="Please add lorem ipsum dolor min ojo riko"></textarea>
-                    <div class="static sm:absolute pt-5 lg:pt-0 right-0 bottom-2">
+                    <div class="flex sm:absolute pt-5 lg:pt-0 right-0 bottom-2 justify-center">
                         <x-layouts.button>
                             Send Message
                         </x-layouts.button>
